@@ -1,0 +1,107 @@
+/* Overall page styling */
+title{
+    background: black;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFDD0; /* Off white background */
+  font-family: 'Montserrat', sans-serif;
+  color: black; /* Beautiful dark blue text */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden; /* Fixes overflow issue */
+}
+
+/* HEADER STYLING */
+header {
+  width: 100%;
+  background: #fffdd0;
+  color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  box-sizing: border-box; /* Ensures the header fits within the page */
+}
+
+/* Brand Name */
+header h1 {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+/* Social Icons in the Header */
+header .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+header .social-icons a {
+  color: black;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+header .social-icons a:hover {
+  color: #5e5e56bb; /* Icons turn black when hovered */
+}
+
+/* Wrapper to center the text */
+.wrapper {
+  max-width: 90%;
+  margin-top: 80px; /* To prevent overlap with the fixed header */
+}
+
+/* Birthday Message Styling */
+.content {
+  font-size: 2em;
+  opacity: 0;
+  margin: 0;
+}
+
+/* Keyframe for an elegant entrance */
+@keyframes coolIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) rotate(-10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Keyframe for a graceful exit */
+@keyframes coolOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.6) rotate(10deg);
+  }
+}
+
+/* Animation classes */
+.animateIn {
+  animation: coolIn 1.5s forwards;
+}
+
+.animateOut {
+  animation: coolOut 1.5s forwards;
+}
+
